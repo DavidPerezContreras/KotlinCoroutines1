@@ -8,7 +8,7 @@ import kotlinx.coroutines.*
 class DataRepositoryImplementation(
     private val dataRemoteImplementation: DataRemoteImplementation
 ) : DataRepository {
-    override fun fetchData(): Deferred<Data> {
+    override suspend fun fetchData(): Data {
         return dataRemoteImplementation.fetchData()
     }
 
